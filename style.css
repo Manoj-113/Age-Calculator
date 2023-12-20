@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
 
 }
 body{
@@ -24,7 +25,7 @@ body{
     border: none;
     outline: none;
 }
-.inputs-wrapper{
+.input-wrapper{
     background-color: rgb(0, 0, 0);
     padding: 30px 25px;
     border-radius: 8px;
@@ -48,12 +49,12 @@ button{
     width: 30%;
     float: right;
 }
-.outputs-wrapper{
+.output-wrapper{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.outputs-wrapper div{
+.output-wrapper div{
     height: 100px;
     width: 100px;
     background-color: rgb(0, 0, 0);
