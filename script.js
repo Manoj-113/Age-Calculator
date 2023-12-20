@@ -26,7 +26,7 @@ const {years, months, days} = calculateAge(birthDetails, currentYear, currentMon
 
 displayResult(days, months, years);
 
-
+};
 
 const isFutureDate = (birthDetails, currentYear, currentMonth, currentDate) => {
 
@@ -45,7 +45,9 @@ const calculateAge = (
         let years = birthDetails.year;
         let months, days;
 
-        if (currentMonth < birthDetails.month - currentMonth);
+        if (currentMonth < birthDetails.month) {
+            years--;
+            months = 12 - (birthDetails.month - currentMonth);
     }
     else{
         months = currentMonth - birthDetails.month;
@@ -60,13 +62,19 @@ const calculateAge = (
         }
         return {years, months, days};
 
+    };
+
     const getDaysInMonth = (month,year) => {
-        const isLeapYear = year%4 === 0 && (year % 100 != 0 || year 400 === 0);
+        const isLeapYear = year%4 === 0 && (year % 100 != 0 || year % 400 === 0);
         const getDaysInMonth = [31, isLeapYear ? 29: 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
         return getDaysInMonth[month - 1];
     };
 
-    
-    };
+    const displayResult = (bdate, bMoth, bYear) => {
+        document, getElementById("years").textContent = bYear;
+        document, getElementById("month").textContent = bMoth;
+        document, getElementById("days").textContent = bdate;
+    }
 
-document.getElementById("calc-age-btn").addEventListener("click", ageCalculate);
+document.getElementById("calc-age-btn").
+addEventListener("click", ageCalculate);
